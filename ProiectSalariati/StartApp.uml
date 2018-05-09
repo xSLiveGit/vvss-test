@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>salariati.main.StartApp</OriginalElement>
+  <nodes>
+    <node x="195.99999999999977" y="762.9999999999998">java.lang.Throwable</node>
+    <node x="746.9965277777776" y="1857.0">salariati.controller.EmployeeController</node>
+    <node x="479.735732323232" y="1513.0">salariati.repository.interfaces.EmployeeRepositoryInterface</node>
+    <node x="314.0888888888885" y="2139.0">salariati.main.StartApp</node>
+    <node x="349.9999999999999" y="1393.3333333333333">java.lang.Exception</node>
+    <node x="742.0624999999998" y="813.9999999999998">java.io.Serializable</node>
+    <node x="905.8388888888884" y="1557.0">salariati.validator.EmployeeValidator</node>
+    <node x="974.1037247474744" y="1142.0">salariati.model.Employee</node>
+    <node x="1082.3298611111109" y="660.0">java.lang.Enum</node>
+    <node x="1303.7673611111109" y="1846.0">salariati.repository.mock.EmployeeMock</node>
+    <node x="824.0798611111109" y="902.9999999999995">java.lang.Comparable</node>
+    <node x="1160.8388888888885" y="2194.0">salariati.test.AddEmployeeTest</node>
+    <node x="487.99999999999994" y="1396.3333333333333">salariati.exception.EmployeeException</node>
+    <node x="1072.7673611111109" y="1824.0">salariati.test.EmployeeFieldsTest</node>
+    <node x="214.40239898989876" y="1802.0">salariati.repository.implementations.EmployeeImpl</node>
+    <node x="1209.0798611111109" y="1013.0">salariati.enumeration.DidacticFunction</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="salariati.repository.mock.EmployeeMock" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
+      <point x="-138.6875" y="-69.5" />
+      <point x="1323.5798611111109" y="1712.0" />
+      <point x="770.3190656565654" y="1712.0" />
+      <point x="132.08333333333337" y="69.5" />
+    </edge>
+    <edge source="salariati.validator.EmployeeValidator" target="salariati.enumeration.DidacticFunction">
+      <point x="-52.250000000000114" y="-25.5" />
+      <point x="958.0888888888883" y="1443.0" />
+      <point x="927.989141414141" y="1443.0" />
+      <point x="927.989141414141" y="1102.0" />
+      <point x="1220.5798611111109" y="1102.0" />
+      <point x="-57.5" y="14.5" />
+    </edge>
+    <edge source="salariati.model.Employee" target="salariati.exception.EmployeeException">
+      <point x="-103.66666666666674" y="-135.5" />
+      <point x="1025.9370580808077" y="1092.0" />
+      <point x="795.25" y="1335.9999999999998" />
+      <point x="37.75" y="14.5" />
+    </edge>
+    <edge source="salariati.repository.implementations.EmployeeImpl" target="salariati.model.Employee">
+      <point x="-29.583333333333258" y="-113.5" />
+      <point x="362.3190656565655" y="1782.0" />
+      <point x="328.22474747474723" y="1782.0" />
+      <point x="328.22474747474723" y="1463.0" />
+      <point x="1012.9787247474744" y="1463.0" />
+      <point x="-116.625" y="135.5" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.io.Serializable">
+      <point x="0.0" y="-245.5" />
+      <point x="260.5" y="905.9999999999998" />
+      <point x="568.5624999999998" y="897.9999999999998" />
+      <point x="-26.5" y="14.5" />
+    </edge>
+    <edge source="salariati.test.AddEmployeeTest" target="salariati.validator.EmployeeValidator">
+      <point x="-24.444444444444343" y="-47.5" />
+      <point x="1246.3944444444442" y="2049.0" />
+      <point x="1026.4965277777776" y="2049.0" />
+      <point x="1026.4965277777776" y="1772.0" />
+      <point x="1019.0472222222218" y="1772.0" />
+      <point x="8.708333333333371" y="25.5" />
+    </edge>
+    <edge source="salariati.repository.mock.EmployeeMock" target="salariati.validator.EmployeeValidator">
+      <point x="-99.0625" y="-69.5" />
+      <point x="1363.2048611111109" y="1702.0" />
+      <point x="1088.7138888888885" y="1702.0" />
+      <point x="78.37500000000011" y="25.5" />
+    </edge>
+    <edge source="salariati.main.StartApp" target="salariati.validator.EmployeeValidator">
+      <point x="199.9375" y="-102.5" />
+      <point x="742.5263888888885" y="2119.0" />
+      <point x="1015.4965277777776" y="2119.0" />
+      <point x="1015.4965277777776" y="1782.0" />
+      <point x="1001.630555555555" y="1782.0" />
+      <point x="-8.708333333333371" y="25.5" />
+    </edge>
+    <edge source="salariati.main.StartApp" target="salariati.exception.EmployeeException">
+      <point x="-199.9375" y="-102.5" />
+      <point x="342.6513888888885" y="2119.0" />
+      <point x="192.90239898989876" y="2119.0" />
+      <point x="298.90239898989876" y="1589.9999999999998" />
+      <point x="368.5833333333334" y="1507.9999999999998" />
+      <point x="-62.91666666666663" y="14.5" />
+    </edge>
+    <edge source="salariati.main.StartApp" target="salariati.controller.EmployeeController">
+      <point x="142.8125" y="-102.5" />
+      <point x="685.4013888888885" y="2109.0" />
+      <point x="843.7465277777776" y="2109.0" />
+      <point x="-32.25" y="58.5" />
+    </edge>
+    <edge source="salariati.validator.EmployeeValidator" target="salariati.model.Employee">
+      <point x="52.249999999999886" y="-25.5" />
+      <point x="1062.5888888888883" y="1493.0" />
+      <point x="1090.7287247474744" y="1493.0" />
+      <point x="-38.875" y="135.5" />
+    </edge>
+    <edge source="salariati.test.AddEmployeeTest" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
+      <point x="-97.77777777777783" y="-47.5" />
+      <point x="1173.0611111111107" y="2079.0" />
+      <point x="590.9023989898988" y="2079.0" />
+      <point x="590.9023989898988" y="1742.0" />
+      <point x="611.8190656565654" y="1742.0" />
+      <point x="-26.41666666666663" y="69.5" />
+    </edge>
+    <edge source="salariati.repository.implementations.EmployeeImpl" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
+      <point x="29.58333333333337" y="-113.5" />
+      <point x="421.4857323232321" y="1742.0" />
+      <point x="506.15239898989864" y="1742.0" />
+      <point x="-132.08333333333337" y="69.5" />
+    </edge>
+    <edge source="salariati.controller.EmployeeController" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
+      <point x="-64.49999999999989" y="-58.5" />
+      <point x="811.4965277777776" y="1732.0" />
+      <point x="717.485732323232" y="1732.0" />
+      <point x="79.25" y="69.5" />
+    </edge>
+    <edge source="salariati.repository.mock.EmployeeMock" target="salariati.enumeration.DidacticFunction">
+      <point x="138.68750000000006" y="-69.5" />
+      <point x="1600.9548611111109" y="1782.0" />
+      <point x="1681.8913510101006" y="1782.0" />
+      <point x="1681.8913510101006" y="1072.0" />
+      <point x="1312.5798611111109" y="1072.0" />
+      <point x="34.5" y="14.5" />
+    </edge>
+    <edge source="salariati.repository.implementations.EmployeeImpl" target="salariati.exception.EmployeeException">
+      <point x="-147.91666666666652" y="-113.5" />
+      <point x="243.98573232323224" y="1782.0" />
+      <point x="279.4781565656567" y="1782.0" />
+      <point x="367.4781565656567" y="1637.9999999999998" />
+      <point x="403.7500000000001" y="1575.9999999999998" />
+      <point x="-37.75" y="14.5" />
+    </edge>
+    <edge source="java.lang.Exception" target="java.lang.Throwable">
+      <point x="-24.75" y="-14.5" />
+      <point x="540.75" y="1357.9999999999998" />
+      <point x="629.75" y="1379.9999999999998" />
+      <point x="155.25" y="245.5" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.io.Serializable">
+      <point x="65.25" y="-146.5" />
+      <point x="1278.0798611111109" y="640.0" />
+      <point x="1258.5798611111109" y="640.0" />
+      <point x="1102.5798611111109" y="615.9999999999999" />
+      <point x="859.5624999999998" y="735.9999999999998" />
+      <point x="26.5" y="14.5" />
+    </edge>
+    <edge source="salariati.test.AddEmployeeTest" target="salariati.repository.mock.EmployeeMock">
+      <point x="24.444444444444343" y="-47.5" />
+      <point x="1295.2833333333328" y="2089.0" />
+      <point x="1462.2673611111109" y="2089.0" />
+      <point x="0.0" y="69.5" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.Enum">
+      <point x="-65.25" y="146.5" />
+      <point x="1147.5798611111109" y="973.0" />
+      <point x="1062.3298611111109" y="973.0" />
+      <point x="1062.3298611111109" y="806.5" />
+      <point x="-130.5" y="-0.0" />
+    </edge>
+    <edge source="java.lang.Throwable" target="java.lang.Throwable">
+      <point x="-258.75" y="245.5" />
+      <point x="247.74999999999977" y="1273.9999999999995" />
+      <point x="175.99999999999977" y="1273.9999999999995" />
+      <point x="175.99999999999977" y="1192.6249999999995" />
+      <point x="-310.5" y="184.125" />
+    </edge>
+    <edge source="salariati.controller.EmployeeController" target="salariati.exception.EmployeeException">
+      <point x="-21.499999999999886" y="-58.5" />
+      <point x="854.4965277777776" y="1722.0" />
+      <point x="807.235732323232" y="1722.0" />
+      <point x="813.235732323232" y="1433.9999999999998" />
+      <point x="710.0833333333333" y="1431.9999999999998" />
+      <point x="12.583333333333371" y="14.5" />
+    </edge>
+    <edge source="salariati.main.StartApp" target="salariati.repository.implementations.EmployeeImpl">
+      <point x="-85.6875" y="-102.5" />
+      <point x="456.9013888888885" y="2099.0" />
+      <point x="391.90239898989876" y="2099.0" />
+      <point x="0.0" y="113.5" />
+    </edge>
+    <edge source="salariati.repository.interfaces.EmployeeRepositoryInterface" target="salariati.model.Employee">
+      <point x="0.0" y="-69.5" />
+      <point x="638.235732323232" y="1473.0" />
+      <point x="1038.8953914141412" y="1473.0" />
+      <point x="-90.70833333333326" y="135.5" />
+    </edge>
+    <edge source="salariati.repository.mock.EmployeeMock" target="salariati.model.Employee">
+      <point x="-19.8125" y="-69.5" />
+      <point x="1442.4548611111109" y="1682.0" />
+      <point x="1355.474684343434" y="1682.0" />
+      <point x="1355.474684343434" y="1473.0" />
+      <point x="1168.4787247474744" y="1473.0" />
+      <point x="38.875" y="135.5" />
+    </edge>
+    <edge source="java.lang.Enum" target="java.lang.Comparable">
+      <point x="-65.25" y="-146.5" />
+      <point x="939.0084325396823" y="770.0" />
+      <point x="899.9370039682537" y="805.7142857142857" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="salariati.exception.EmployeeException" target="java.lang.Exception">
+      <point x="37.75" y="-14.5" />
+      <point x="536.5833333333335" y="1376.3333333333335" />
+      <point x="475.5833333333335" y="1399.6666666666667" />
+      <point x="24.75" y="14.5" />
+    </edge>
+    <edge source="salariati.test.AddEmployeeTest" target="salariati.model.Employee">
+      <point x="48.888888888888914" y="-47.5" />
+      <point x="1319.7277777777772" y="2099.0" />
+      <point x="1631.2673611111109" y="2099.0" />
+      <point x="1631.2673611111109" y="1443.0" />
+      <point x="1246.2287247474744" y="1443.0" />
+      <point x="116.625" y="135.5" />
+    </edge>
+    <edge source="salariati.repository.mock.EmployeeMock" target="salariati.exception.EmployeeException">
+      <point x="99.06250000000006" y="-69.5" />
+      <point x="1561.3298611111109" y="1772.0" />
+      <point x="1642.2673611111109" y="1772.0" />
+      <point x="1642.2673611111109" y="1082.0" />
+      <point x="872.4166666666667" y="1383.9999999999998" />
+      <point x="62.91666666666674" y="14.5" />
+    </edge>
+    <edge source="salariati.main.StartApp" target="salariati.repository.interfaces.EmployeeRepositoryInterface">
+      <point x="-28.5625" y="-102.5" />
+      <point x="514.0263888888885" y="2079.0" />
+      <point x="579.9023989898988" y="2079.0" />
+      <point x="579.9023989898988" y="1742.0" />
+      <point x="558.985732323232" y="1742.0" />
+      <point x="-79.25" y="69.5" />
+    </edge>
+    <edge source="salariati.main.StartApp" target="salariati.model.Employee">
+      <point x="-142.8125" y="-102.5" />
+      <point x="399.7763888888885" y="2109.0" />
+      <point x="203.90239898989876" y="2109.0" />
+      <point x="203.90239898989876" y="1453.0" />
+      <point x="987.0620580808077" y="1453.0" />
+      <point x="-142.54166666666674" y="135.5" />
+    </edge>
+    <edge source="salariati.test.AddEmployeeTest" target="salariati.controller.EmployeeController">
+      <point x="-73.33333333333348" y="-47.5" />
+      <point x="1197.505555555555" y="2069.0" />
+      <point x="908.2465277777776" y="2069.0" />
+      <point x="32.25" y="58.5" />
+    </edge>
+    <edge source="salariati.test.EmployeeFieldsTest" target="salariati.model.Employee">
+      <point x="0.0" y="-91.5" />
+      <point x="1177.7673611111109" y="1782.0" />
+      <point x="1212.130934343434" y="1782.0" />
+      <point x="1212.130934343434" y="1493.0" />
+      <point x="1116.6453914141412" y="1493.0" />
+      <point x="-12.958333333333258" y="135.5" />
+    </edge>
+    <edge source="salariati.test.EmployeeFieldsTest" target="salariati.validator.EmployeeValidator">
+      <point x="-42.0" y="-91.5" />
+      <point x="1135.7673611111109" y="1772.0" />
+      <point x="1053.880555555555" y="1772.0" />
+      <point x="43.54166666666663" y="25.5" />
+    </edge>
+    <edge source="salariati.test.AddEmployeeTest" target="salariati.enumeration.DidacticFunction">
+      <point x="97.77777777777783" y="-47.5" />
+      <point x="1368.6166666666663" y="2119.0" />
+      <point x="1703.8913510101006" y="2119.0" />
+      <point x="1703.8913510101006" y="1062.0" />
+      <point x="1335.5798611111109" y="1062.0" />
+      <point x="57.5" y="14.5" />
+    </edge>
+    <edge source="salariati.repository.implementations.EmployeeImpl" target="salariati.validator.EmployeeValidator">
+      <point x="88.75" y="-113.5" />
+      <point x="480.65239898989876" y="1752.0" />
+      <point x="914.5472222222218" y="1752.0" />
+      <point x="-95.79166666666663" y="25.5" />
+    </edge>
+    <edge source="salariati.enumeration.DidacticFunction" target="java.lang.Enum">
+      <point x="0.0" y="-14.5" />
+      <point x="65.25" y="146.5" />
+    </edge>
+    <edge source="salariati.controller.EmployeeController" target="salariati.model.Employee">
+      <point x="21.500000000000114" y="-58.5" />
+      <point x="897.4965277777776" y="1742.0" />
+      <point x="868.8398989898986" y="1742.0" />
+      <point x="868.8398989898986" y="1483.0" />
+      <point x="1064.8120580808077" y="1483.0" />
+      <point x="-64.79166666666674" y="135.5" />
+    </edge>
+    <edge source="salariati.model.Employee" target="salariati.enumeration.DidacticFunction">
+      <point x="0.0" y="-135.5" />
+      <point x="1129.6037247474744" y="1112.0" />
+      <point x="1243.5798611111109" y="1112.0" />
+      <point x="-34.5" y="14.5" />
+    </edge>
+    <edge source="salariati.test.EmployeeFieldsTest" target="salariati.enumeration.DidacticFunction">
+      <point x="84.0" y="-91.5" />
+      <point x="1261.7673611111109" y="1782.0" />
+      <point x="1435.568434343434" y="1782.0" />
+      <point x="1435.568434343434" y="1122.0" />
+      <point x="1289.5798611111109" y="1122.0" />
+      <point x="11.5" y="14.5" />
+    </edge>
+    <edge source="salariati.controller.EmployeeController" target="salariati.validator.EmployeeValidator">
+      <point x="64.50000000000011" y="-58.5" />
+      <point x="940.4965277777776" y="1782.0" />
+      <point x="966.7972222222218" y="1782.0" />
+      <point x="-43.54166666666663" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="1364.6666666666656" y="1548.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

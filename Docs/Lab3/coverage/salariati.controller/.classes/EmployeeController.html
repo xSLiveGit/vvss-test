@@ -1,0 +1,166 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: EmployeeController</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">salariati.controller</a> ]
+</div>
+
+<h1>Coverage Summary for Class: EmployeeController (salariati.controller)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">EmployeeController</td>
+<td class="coverageStat">
+  <span class="percent">
+    100%
+  </span>
+  <span class="absValue">
+    (1/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    33.3%
+  </span>
+  <span class="absValue">
+    (2/ 6)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    33.3%
+  </span>
+  <span class="absValue">
+    (14/ 42)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package salariati.controller;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.Comparator;
+<i>4</i>&nbsp;import java.util.Date;
+<i>5</i>&nbsp;import java.util.List;
+<i>6</i>&nbsp;import java.util.function.Predicate;
+<i>7</i>&nbsp;import java.util.stream.Collectors;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import salariati.exception.EmployeeException;
+<i>10</i>&nbsp;import salariati.model.Employee;
+<i>11</i>&nbsp;import salariati.repository.interfaces.EmployeeRepositoryInterface;
+<i>12</i>&nbsp;import salariati.validator.EmployeeValidator;
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;public class EmployeeController {
+<i>15</i>&nbsp;	
+<i>16</i>&nbsp;	private EmployeeRepositoryInterface employeeRepository;
+<i>17</i>&nbsp;	private EmployeeValidator employeeValidator;
+<i>18</i>&nbsp;
+<b class="fc"><i>19</i>&nbsp;	public EmployeeController(EmployeeRepositoryInterface employeeRepository, EmployeeValidator validator) {</b>
+<b class="fc"><i>20</i>&nbsp;		this.employeeRepository = employeeRepository;</b>
+<b class="fc"><i>21</i>&nbsp;		this.employeeValidator = validator;</b>
+<b class="fc"><i>22</i>&nbsp;	}</b>
+<i>23</i>&nbsp;	
+<i>24</i>&nbsp;	public void addEmployee(String[] employeeAttrs) throws EmployeeException {
+<b class="fc"><i>25</i>&nbsp;	    Employee employee = Employee.getEmployeeFromString(employeeAttrs);</b>
+<b class="fc"><i>26</i>&nbsp;		if(!employeeValidator.isValid(employee)){</b>
+<b class="fc"><i>27</i>&nbsp;			throw new EmployeeException(&quot;Invalid employee&quot;);</b>
+<i>28</i>&nbsp;		}
+<i>29</i>&nbsp;
+<b class="fc"><i>30</i>&nbsp;		List&lt;Employee&gt; employees = employeeRepository.getEmployeeList();</b>
+<b class="fc"><i>31</i>&nbsp;		for(Employee currentEmployee : employees){</b>
+<b class="fc"><i>32</i>&nbsp;			if(currentEmployee.getCnp().equals(employee.getCnp())){</b>
+<b class="fc"><i>33</i>&nbsp;				throw new EmployeeException(&quot;There&#39;s already an employee with this cnp&quot;);</b>
+<i>34</i>&nbsp;			}
+<b class="fc"><i>35</i>&nbsp;		}</b>
+<i>36</i>&nbsp;
+<b class="fc"><i>37</i>&nbsp;		employeeRepository.addEmployee(employee);</b>
+<b class="fc"><i>38</i>&nbsp;	}</b>
+<i>39</i>&nbsp;	
+<i>40</i>&nbsp;	public List&lt;Employee&gt; getEmployeesList() {
+<b class="nc"><i>41</i>&nbsp;		List&lt;Employee&gt; employees = employeeRepository.getEmployeeList();</b>
+<b class="nc"><i>42</i>&nbsp;		employees.sort((o1, o2) -&gt; {</b>
+<b class="nc"><i>43</i>&nbsp;            if(o1.getSalary().equals(o2.getSalary())){</b>
+<b class="nc"><i>44</i>&nbsp;                String age1 = o1.getCnp().substring(1,3);</b>
+<b class="nc"><i>45</i>&nbsp;                String age2 = o2.getCnp().substring(1,3);</b>
+<b class="nc"><i>46</i>&nbsp;                if(!age1.equals(age2))</b>
+<b class="nc"><i>47</i>&nbsp;                    return age1.compareTo(age2);</b>
+<b class="nc"><i>48</i>&nbsp;                String month1 = o1.getCnp().substring(3,5);</b>
+<b class="nc"><i>49</i>&nbsp;                String month2 = o2.getCnp().substring(3,5);</b>
+<b class="nc"><i>50</i>&nbsp;                if(!month1.equals(month2))</b>
+<b class="nc"><i>51</i>&nbsp;                    return month1.compareTo(month2);</b>
+<b class="nc"><i>52</i>&nbsp;                return o1.getCnp().substring(5,7).compareTo(o2.getCnp().substring(5,7));</b>
+<i>53</i>&nbsp;            }
+<b class="nc"><i>54</i>&nbsp;            return o2.getSalary().compareTo(o1.getSalary());</b>
+<i>55</i>&nbsp;        });
+<b class="nc"><i>56</i>&nbsp;		return employeeRepository.getEmployeeList();</b>
+<i>57</i>&nbsp;	}
+<i>58</i>&nbsp;	
+<i>59</i>&nbsp;	public void modifyEmployee(String[] employeeAttrs) throws EmployeeException {
+<b class="nc"><i>60</i>&nbsp;        Employee newEmployee = Employee.getEmployeeFromString(employeeAttrs);</b>
+<i>61</i>&nbsp;
+<b class="nc"><i>62</i>&nbsp;        if(!employeeValidator.isValid(newEmployee)){</b>
+<b class="nc"><i>63</i>&nbsp;            throw new EmployeeException(&quot;New employee is invalid&quot;);</b>
+<i>64</i>&nbsp;        }
+<i>65</i>&nbsp;
+<b class="nc"><i>66</i>&nbsp;		List&lt;Employee&gt; employees = employeeRepository.getEmployeeList()</b>
+<b class="nc"><i>67</i>&nbsp;				.stream()</b>
+<b class="nc"><i>68</i>&nbsp;				.filter(employee -&gt; employee.getCnp().equals(newEmployee.getCnp()))</b>
+<b class="nc"><i>69</i>&nbsp;				.collect(Collectors.toList());</b>
+<i>70</i>&nbsp;
+<b class="nc"><i>71</i>&nbsp;        if(employees.size() != 1){</b>
+<b class="nc"><i>72</i>&nbsp;			throw new EmployeeException(&quot;Invalid employee cnp&quot;);</b>
+<i>73</i>&nbsp;		}
+<i>74</i>&nbsp;
+<b class="nc"><i>75</i>&nbsp;		employeeRepository.modifyEmployee(employees.get(0), newEmployee);</b>
+<b class="nc"><i>76</i>&nbsp;	}</b>
+<i>77</i>&nbsp;
+<i>78</i>&nbsp;	public void deleteEmployee(String[] employeeAttrs) throws EmployeeException {
+<b class="nc"><i>79</i>&nbsp;        Employee employee = Employee.getEmployeeFromString(employeeAttrs);</b>
+<b class="nc"><i>80</i>&nbsp;        employeeRepository.deleteEmployee(employee);</b>
+<b class="nc"><i>81</i>&nbsp;	}</b>
+<i>82</i>&nbsp;	
+<i>83</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2018-04-24 19:13</div>
+</div>
+</body>
+</html>

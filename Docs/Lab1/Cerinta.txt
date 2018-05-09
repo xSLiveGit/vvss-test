@@ -1,0 +1,7 @@
+Proiectaţi şi implementaţi o aplicaţie Java pentru rezolvarea problemei propuse. Se va evidenţia o arhitectură stratificată. Informaţiile vor fi preluate din fişiere text. 
+ 
+2. Salariati universitate Universitatea doreste dezvoltarea unui program pentru gestiunea salariatilor. 
+Acesta va avea urmatoarele functionalitati: 
+i. adaugarea unui nou angajat (nume, prenume, CNP, functia didactica, salariul de incadrare) la consola 
+ii. modificarea fieldurilor unui angajat
+iii. afisarea salariatilor la console ordonati descrescator dupa salariu si crescator dupa varsta (CNP), criteriul prioritar fiind salariul
